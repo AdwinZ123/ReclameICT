@@ -1,6 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using FluentEmail.Core;
+using FluentEmail.Razor;
+using FluentEmail.Smtp;
+using Microsoft.AspNetCore.Mvc;
 using Opdracht_Programmeren.Models;
 using System.Diagnostics;
+using System.Net.Mail;
+using System.Text;
 
 namespace Opdracht_Programmeren.Controllers
 {
@@ -24,11 +29,33 @@ namespace Opdracht_Programmeren.Controllers
         }
 
         [HttpPost]
-        public IActionResult Contact([Bind("Firstname", "LastName", "Mail", "Text", "PhoneNumber")] Contact contact)
+        public async Task<IActionResult> ContactAsync([Bind("Firstname", "LastName", "Mail", "Text", "PhoneNumber")] Contact contact)
         {
             if (ModelState.IsValid)
             {
+                var fullName = $"{contact.Firstname} {contact.LastName}";
 
+                var sender = new SmtpSender(() => new SmtpClient("localhost")
+                {
+                    EnableSsl = false,
+                    DeliveryMethod = SmtpDeliveryMethod.Network,
+                    Port = 25
+                });
+
+                StringBuilder template = new();
+                template.AppendLine("Hey @Model.Name,");
+                template.AppendLine("<p>Bedankt voor je bericht! We zullen zo snel mogelijk reageren.</p>");
+                template.AppendLine("- Hoornbeeck ICT");
+
+                Email.DefaultSender = sender;
+                Email.DefaultRenderer = new RazorRenderer();
+
+                var email = await Email
+                    .From("info@hoornbeeck.nl")
+                    .To(contact.Mail)
+                    .Subject("Bedankt voor je bericht!")
+                    .UsingTemplate(template.ToString(), new { Name = fullName })
+                    .SendAsync();
             }
 
             return RedirectToAction("Index");
