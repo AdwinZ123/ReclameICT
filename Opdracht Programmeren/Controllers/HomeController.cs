@@ -18,9 +18,20 @@ namespace Opdracht_Programmeren.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Contact()
         {
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult Contact([Bind("Firstname", "LastName", "Mail", "Text", "PhoneNumber")] Contact contact)
+        {
+            if (ModelState.IsValid)
+            {
+
+            }
+
+            return RedirectToAction("Index");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
