@@ -1,5 +1,5 @@
 ﻿@model Opdracht_Programmeren.Models.Contact
-
+@*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />*@
 @{
     ViewData["Title"] = "Contact";
 }
@@ -8,42 +8,44 @@
 
 <h4>Contact</h4>
 <hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Contact">
+<div class="md:w-1/3">
+    <div class="w-full max-w-xs">
+        <form asp-action="Contact" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Firstname" class="control-label"></label>
-                <input asp-for="Firstname" class="form-control" placeholder="Type hier..." />
+                <label asp-for="Firstname" class="block text-gray-700 text-sm font-bold mb-2"></label>
+                <input asp-for="Firstname" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Type hier..." />
                 <span asp-validation-for="Firstname" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="LastName" class="control-label"></label>
-                <input asp-for="LastName" class="form-control" placeholder="Type hier..." />
+                <label asp-for="LastName" class="block text-gray-700 text-sm font-bold mb-2"></label>
+                <input asp-for="LastName" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Type hier..." />
                 <span asp-validation-for="LastName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Mail" class="control-label"></label>
-                <input asp-for="Mail" type="email" class="form-control" placeholder="Type hier..." />
+                <label asp-for="Mail" class="block text-gray-700 text-sm font-bold mb-2"></label>
+                <input asp-for="Mail" type="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Type hier..." />
                 <span asp-validation-for="Mail" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="PhoneNumber" class="control-label"></label>
-                <input asp-for="PhoneNumber" type="tel" class="form-control" placeholder="Type hier..." />
+                <label asp-for="PhoneNumber" class="block text-gray-700 text-sm font-bold mb-2"></label>
+                <input asp-for="PhoneNumber" type="tel" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Type hier..." />
                 <span asp-validation-for="PhoneNumber" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Text" class="control-label"></label>
-                <textarea asp-for="Text" class="form-control" placeholder="Type hier..."></textarea>
+                <label asp-for="Text" class="block text-gray-700 text-sm font-bold mb-2"></label>
+                <textarea asp-for="Text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Type hier..."></textarea>
                 <span asp-validation-for="Text" class="text-danger"></span>
             </div>
             <br />
             <div class="form-group">
-                <input type="submit" value="Stuur" class="btn btn-primary" />
+                <input type="submit" value="Stuur" class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" />
             </div>
         </form>
     </div>
 </div>
+
+
 
 @section Scripts {
     @{
