@@ -4,48 +4,52 @@
     ViewData["Title"] = "Contact";
 }
 
-<h1>Contact</h1>
+<div>
+    <img class="w-screen h-screen object-cover absolute"
+         src="../img/banner.jpg"
+         alt="Banner Background" />
 
-<h4>Contact</h4>
-<hr />
-<div class="md:w-1/3">
+    <div class="absolute left-1/2 top-1/2 mt-30 w-9/12 flex justify-around" style="transform: translate(-50%, -50%);">
     <div class="w-full max-w-xs">
         <form asp-action="Contact" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div asp-validation-summary="ModelOnly" class="text-red-500"></div>
             <div class="form-group">
                 <label asp-for="Firstname" class="block text-gray-700 text-sm font-bold mb-2"></label>
                 <input asp-for="Firstname" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Type hier..." />
-                <span asp-validation-for="Firstname" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="LastName" class="block text-gray-700 text-sm font-bold mb-2"></label>
-                <input asp-for="LastName" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Type hier..." />
-                <span asp-validation-for="LastName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Mail" class="block text-gray-700 text-sm font-bold mb-2"></label>
-                <input asp-for="Mail" type="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Type hier..." />
-                <span asp-validation-for="Mail" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PhoneNumber" class="block text-gray-700 text-sm font-bold mb-2"></label>
-                <input asp-for="PhoneNumber" type="tel" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Type hier..." />
-                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Text" class="block text-gray-700 text-sm font-bold mb-2"></label>
-                <textarea asp-for="Text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Type hier..."></textarea>
-                <span asp-validation-for="Text" class="text-danger"></span>
+                <span asp-validation-for="Firstname" class="text-red-500"></span>
             </div>
             <br />
             <div class="form-group">
-                <input type="submit" value="Stuur" class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" />
+                <label asp-for="LastName" class="block text-gray-700 text-sm font-bold mb-2"></label>
+                <input asp-for="LastName" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Type hier..." />
+                <span asp-validation-for="LastName" class="text-red-500"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Mail" class="block text-gray-700 text-sm font-bold mb-2"></label>
+                <input asp-for="Mail" type="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Type hier..." />
+                <span asp-validation-for="Mail" class="text-red-500"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="PhoneNumber" class="block text-gray-700 text-sm font-bold mb-2"></label>
+                <input asp-for="PhoneNumber" type="tel" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Type hier..." />
+                <span asp-validation-for="PhoneNumber" class="text-red-500"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Text" class="block text-gray-700 text-sm font-bold mb-2"></label>
+                <textarea asp-for="Text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Type hier..."></textarea>
+                <span asp-validation-for="Text" class="text-red-500"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Stuur" class="shadow text-white focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" style="background-color:  #216361;"/>
             </div>
         </form>
     </div>
 </div>
-
-
+</div>
 
 @section Scripts {
     @{
