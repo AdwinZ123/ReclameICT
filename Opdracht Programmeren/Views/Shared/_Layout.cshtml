@@ -11,11 +11,11 @@
 <body class="overflow-x-hidden">
     <header class="scroll flex items-center w-screen px-20 mb-5 fixed top-0 backdrop-blur-md z-50">
         <div>
-            <img src="../img/logo.png" class="w-1/5 p-3"/>
+            <a asp-action="Index" asp-controller="Home" ><img src="../img/logo.png" class="w-1/5 p-3"/></a>
         </div>
         <div class="flex flex-grow justify-end gap-10">
-            <h1 class="font-bold text-xl">Home</h1>
-            <h1 class="font-bold text-xl">Contact</h1>
+            <a asp-action="Index" asp-controller="Home" ><h1 class="font-bold text-xl">Home</h1></a>
+            <a asp-action="Contact" asp-controller="Home" ><h1 class="font-bold text-xl">Contact</h1></a>
         </div>
     </header>
     <div>
