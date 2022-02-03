@@ -16,3 +16,25 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.scroll {
+    color: white;
+}
+
+.scrollDown {
+    color: black;
+}
+
+.button-home {
+    background-color: #216361;
+    transition: ease-in 0.2s;
+}
+
+.button-home:hover {
+    background-color: white;
+    color: #216361;
+}
+
+.card-top {
+    background-color: #216361;
+}
