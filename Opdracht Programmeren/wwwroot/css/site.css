@@ -1,5 +1,6 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 @media (min-width: 768px) {
@@ -18,11 +19,11 @@ body {
 }
 
 .scroll {
-    color: white;
+    color: black;
 }
 
 .scrollDown {
-    color: black;
+    color: white;
 }
 
 .button-home {
@@ -35,6 +36,42 @@ body {
     color: #216361;
 }
 
+.button-popup {
+    background-color: #216361;
+    transition: ease-in 0.2s;
+}
+
 .card-top {
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.card-wrapper {
     background-color: #216361;
 }
+
+.popup-top {
+    background-color: #216361;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #393235 #ffffff;
+}
+
+    /* Chrome, Edge, and Safari */
+    *::-webkit-scrollbar {
+        width: 16px;
+    }
+
+    *::-webkit-scrollbar-track {
+        background: #ffffff;
+    }
+
+    *::-webkit-scrollbar-thumb {
+        background-color: #393235;
+        border-radius: 10px;
+        border: 3px solid #ffffff;
+    }

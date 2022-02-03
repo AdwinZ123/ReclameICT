@@ -17,17 +17,120 @@
     </div>
 </div>
 
-<div class="flex mt-20 mb-20 justify-center gap-20">
-    <div class="h-20 w-2/12 card-top">
+<div class="h-72 ml-64 w-6/12 mt-5" style="min-height: min-content;">
+    <h1 class="text-5xl">Hoornbeeck ICT</h1> <br />
+    <p>Jij bent gek op computers, gaat nauwkeurig te werk en houdt ervan om mooie dingen te maken. Met de opleiding Software Developer word je in drie jaar klaargestoomd om software te ontwikkelen voor een scala aan toepassingen. Je leert programmeren in verschillende talen zoals HTML, CSS, Javascript en PHP. Voor je het weet maak je software voor diverse platforms: denk aan webservers, webbrowsers en apps voor de smartphone of andere apparaten. Naast programmeren houd je je bezig met ontwerptechnieken, software-ontwikkelmethodieken, werken met databases en het ontwikkelen van userinterfaces. Door alles heen loopt security als rode draad. </p>
+</div>
+
+<div class="card-wrapper flex flex-wrap p-20 justify-center gap-20">
+    <div class="cursor-pointer flex items-center justify-center h-80 w-2/12 card-top rounded-xl" style="min-width: 244px" onclick="openModal('1')">
         <img src="../img/HTML.png" style="width: 150px;"/>
     </div>
-    <div class="h-20 w-2/12 card-top">
-        <img src="../img/CSS.png" style="width: 150px;"/>
+    <div class="cursor-pointer flex items-center justify-center h-80 w-2/12 card-top rounded-xl" style="min-width: 244px" onclick="openModal('2')">
+        <img src="../img/CSS.png" style="width: 110px;"/>
     </div>
-    <div class="h-20 w-2/12 card-top">
+    <div class="cursor-pointer flex items-center justify-center h-80 w-2/12 card-top rounded-xl" style="min-width: 244px" onclick="openModal('3')">
         <img src="../img/Javascript.png" style="width: 150px;"/>
     </div>
-    <div class="h-20 w-2/12 card-top">
+    <div class="cursor-pointer flex items-center justify-center h-80 w-2/12 card-top rounded-xl" style="min-width: 244px" onclick="openModal('4')">
         <img src="../img/Php.png" style="width: 150px;"/>
     </div>
 </div>
+
+    <div id="1" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4">
+    <div class="relative top-40 mx-auto shadow-lg rounded-md bg-white max-w-md">
+
+        <!-- Modal header -->
+        <div class="flex justify-between items-center popup-top text-white text-xl rounded-t-md px-4 py-2">
+            <h3>Wat is HTML?</h3>
+            <button onclick="closeModal('1')">x</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="p-4">
+            <p>Het is de standaard opmaaktaal voor webpagina's. Documenten in HTML kunnen geopend en gelezen worden door een webbrowser om vervolgens als webpagina weergegeven te worden.</p>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="px-4 py-2 border-t border-t-gray-500 flex justify-end items-center space-x-4">
+            <button class="button-popup text-white px-4 py-2 rounded-md" onclick="closeModal('1')">Sluiten</button>
+        </div>
+    </div>
+</div>
+
+    <div id="2" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4">
+    <div class="relative top-40 mx-auto shadow-lg rounded-md bg-white max-w-md">
+
+        <!-- Modal header -->
+        <div class="flex justify-between items-center popup-top text-white text-xl rounded-t-md px-4 py-2">
+            <h3>Wat is CSS?</h3>
+            <button onclick="closeModal('2')">x</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="p-4">
+            <p>Cascading Style Sheets, afgekort CSS is een programeertaal die zorgt voor de opmaak van HTML bestanden.
+
+Aan de basis van elke pagina op een website zit een HTML bestand, dat zorgt voor alle inhoud die je te zien krijgt (tekst, afbeeldingen, links..) . Je denkt nu misschien, waarom heb ik CSS dan nodig? CSS zorgt er namelijk voor dat je die HTML code vorm kan geven.</p>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="px-4 py-2 border-t border-t-gray-500 flex justify-end items-center space-x-4">
+            <button class="button-popup text-white px-4 py-2 rounded-md" onclick="closeModal('2')">Sluiten</button>
+        </div>
+    </div>
+</div>
+
+    <div id="3" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4">
+    <div class="relative top-40 mx-auto shadow-lg rounded-md bg-white max-w-md">
+
+        <!-- Modal header -->
+        <div class="flex justify-between items-center popup-top text-white text-xl rounded-t-md px-4 py-2">
+            <h3>Wat is Javascript?</h3>
+            <button onclick="closeModal('3')">x</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="p-4">
+            <p>JavaScript is een veelgebruikte scripttaal om webpagina's interactief te maken en webapplicaties te ontwikkelen. Naast HTML en CSS is JavaScript een van de kerntechnologieën van het wereldwijde web.</p>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="px-4 py-2 border-t border-t-gray-500 flex justify-end items-center space-x-4">
+            <button class="button-popup text-white px-4 py-2 rounded-md" onclick="closeModal('3')">Sluiten</button>
+        </div>
+    </div>
+</div>
+
+    <div id="4" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4">
+    <div class="relative top-40 mx-auto shadow-lg rounded-md bg-white max-w-md">
+
+        <!-- Modal header -->
+        <div class="flex justify-between items-center popup-top text-white text-xl rounded-t-md px-4 py-2">
+            <h3>Wat is PHP?</h3>
+            <button onclick="closeModal('4')">x</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="p-4">
+            <p>PHP is een programmeertaal, ook wel Hypertext Preprocessor genoemd. Dankzij PHP en andere programmeertalen zoals HTML, kunnen we dingen zoals websites en zoekmachines op het internet bouwen. PHP is een open-source, wat betekent dat iedereen vrij is om het te gebruiken. De taal heeft zijn populariteit bereikt door voorop te lopen in open source webtechnologie. </p>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="px-4 py-2 border-t border-t-gray-500 flex justify-end items-center space-x-4">
+            <button class="button-popup text-white px-4 py-2 rounded-md" onclick="closeModal('4')">Sluiten</button>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function openModal(modalId) {
+        modal = document.getElementById(modalId)
+        modal.classList.remove('hidden')
+    }
+
+    function closeModal(modalId) {
+        modal = document.getElementById(modalId)
+        modal.classList.add('hidden')
+    }
+</script>
